@@ -1,0 +1,19 @@
+# Obsidian - workspace files are machine-specific
+kb/.obsidian/workspace*.json
+
+# Claude Code - local settings are machine-specific
+.claude/settings.local.json
+
+# Browser data from Playwright/scraping
+kb/personal/shopping/browser-data/
+
+# OneDrive conflict/lock files
+_ul
+_ul-*
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Node
+node_modules/
