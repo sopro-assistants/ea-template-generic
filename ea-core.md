@@ -48,6 +48,9 @@ The memory enables proactive assistance — connecting dots, anticipating needs,
 
 ```
 /kb
+  /shared/                   # Shared knowledge bases (nested git repos, in .gitignore)
+                             # Added via: /ea-sync add <repo-url>
+                             # Pulled automatically on each /ea-sync
   /inbox
     /transcripts/            # Meeting transcript exports land here
     /notes/                  # Quick capture - voice memos, quick thoughts
@@ -380,7 +383,9 @@ Claude's task management - review, clarify, and execute delegated tasks:
 - Reports results and updates todos when complete
 
 ### `/ea-sync`
-Sync system updates and push personal changes:
+Sync shared knowledge bases, system updates, and push personal changes:
+- Pulls all shared KBs in `kb/shared/` (nested git repos)
+- Add new shared KBs: `/ea-sync add <repo-url>`
 - Updates `ea-core.md` from template repo
 - Auto-commits and pushes personal changes (kb/, MEMORY.md, skills)
 - Runs automatically as Step 0 of `/startup`
@@ -463,6 +468,7 @@ To find information quickly:
 
 | Need | Method |
 |------|--------|
+| Shared/company context | Read files in `kb/shared/` repos (overview, strategy, etc.) |
 | All meetings with a person | Grep for `attendees:.*[[Person]]` or search in `/team/person/meetings/` |
 | Open actions for someone | Grep `- \[ \]` in their folder or with their name |
 | All active projects | Grep `status: active` in `/projects/` |

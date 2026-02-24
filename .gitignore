@@ -1,3 +1,6 @@
+# Shared knowledge bases - nested git repos (added via /ea-sync add)
+kb/shared/
+
 # Obsidian - workspace files are machine-specific
 kb/.obsidian/workspace*.json
 
